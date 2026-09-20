@@ -7,6 +7,7 @@ const PORT = 3000;
 app.use(express.json());
 
 app.post("/api/location", async (req, res) => {
+  console.log("Received location data:", req.body);
   const { latitude, longitude, accuracy, timestamp } = req.body;
 
   if (
